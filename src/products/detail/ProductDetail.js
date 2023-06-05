@@ -3,6 +3,7 @@ import { CartContext } from "../CartContext";
 // eslint-disable-next-line no-unused-vars
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 import RelatedProduct from "./RelatedProduct";
 import Ratings from "react-ratings-declarative";
@@ -50,9 +51,9 @@ function ProductDetail() {
                   </Link>
                 </li> */}
                 <li className="breadcrumb-item">
-                  <a className="text-decoration-none link-secondary" href="!#">
+                  <Link className="text-decoration-none link-secondary" to={"/landing"}>
                     Back To Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                   {item.nm_produk}
